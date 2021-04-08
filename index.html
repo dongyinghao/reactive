@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .flex {
+            display: flex;
+        }
+        .jc-c {
+            justify-content: center;
+        }
+        .jc-b {
+            justify-content: space-between;
+        }
+        .w-300 {
+            width: 300px;
+        }
+        .pt-100 {
+            padding-top: 100px;
+        }
+        .item {
+            border: 1px solid red;
+            border-radius: 6px;
+            padding: 6px 10px;
+            margin-right: 20px;
+        }
+    </style>
+    <title>响应式数据</title>
+</head>
+<body>
+<div class="flex jc-c pt-100" style="height: 100%">
+    <div id="app"></div>
+</div>
+<div class="flex jc-b w-300" style="margin: 40px auto;">
+    <button id="job">修改职业</button>
+    <button id="age">修改年龄</button>
+    <button id="add">新增成员</button>
+    <button id="minus">隐藏成员</button>
+</div>
+</body>
+</html>
