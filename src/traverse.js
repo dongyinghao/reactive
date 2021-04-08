@@ -20,6 +20,7 @@ let _traverse = (val, seen) => {
       let keys = Object.keys(val);
       let i = keys.length;
       while (i--) {
+        // val[keys[i]] 此处自动读取数据以收集依赖
         _traverse(val[keys[i]], seen)
       }
     }

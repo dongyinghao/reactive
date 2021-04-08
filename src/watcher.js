@@ -19,6 +19,7 @@ export default class Watcher {
   get() {
     window.target = this;
     let value = this.getter(vm);
+    // 深度监听数据，当子数据发生改变时也会触发当前依赖
     if (this.deep) traverse(value);
     window.target = undefined;
     return value;
