@@ -17,7 +17,7 @@ let _traverse = (val, seen) => {
         _traverse(val[i], seen)
       }
     } else {
-      let keys = Object.keys(val);
+      let keys = Object.key(val);
       let i = keys.length;
       while (i--) {
         // val[keys[i]] 此处自动读取数据以收集依赖

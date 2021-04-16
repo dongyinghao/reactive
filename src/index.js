@@ -1,5 +1,6 @@
 import Observer from './observer.js'
 import Watcher from './Watcher.js'
+import { set } from './set.js'
 import vm from './data.js'
 
 parseToDom();
@@ -10,6 +11,9 @@ function parseToDom() {
   let html = `
   <div class="flex mt-20">
         <div class="w-150">姓名:</div><div>${vm.data.name}</div>
+    </div>
+    <div class="flex mt-20">
+        <div class="w-150">测试:</div><div>${vm.data.test || '--'}</div>
     </div>
     <div class="flex mt-20">
         <div class="w-150">性别:</div><div>${vm.data.gender}</div>
@@ -60,7 +64,8 @@ document.querySelector('#minus').addEventListener('click', () => {
     vm.data.family.splice(vm.data.family.length - 1, 1)
 });
 document.querySelector('#job').addEventListener('click', () => {
-    vm.data.info.job = vm.data.info.job === '教师' ? '测量员' : '教师';
+    // vm.data.info.job = vm.data.info.job === '教师' ? '测量员' : '教师';
+  set(vm.data, 'test', '哈哈')
 });
 
 
