@@ -2,6 +2,7 @@ import Observer from './observer.js'
 import Watcher from './Watcher.js'
 import { set } from './set.js'
 import vm from './data.js'
+import { moment } from './util.js'
 
 parseToDom();
 
@@ -9,8 +10,11 @@ parseToDom();
 function parseToDom() {
   const ele = document.querySelector('#app');
   let html = `
-  <div class="flex mt-20">
+    <div class="flex mt-20">
         <div class="w-150">姓名:</div><div>${vm.data.name}</div>
+    </div>
+     <div class="flex mt-20">
+        <div class="w-150">时间格式转化:</div><div>${moment().format('YYYY年M月D日 h:m:s')}</div>
     </div>
     <div class="flex mt-20">
         <div class="w-150">测试:</div><div>${vm.data.test || '--'}</div>

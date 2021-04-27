@@ -39,7 +39,7 @@ export default class Observer {
 }
 
 // 创建响应式数据
-function definedReactive(target, key, value) {
+export function definedReactive(target, key, value) {
   let childObserver = undefined;
   if (value instanceof Array) childObserver = observer(value);
   let dep = new Dep();
