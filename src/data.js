@@ -12,7 +12,7 @@ export default {
     },
     family: [
       {
-        name: '龚燕',
+        name: '嘿嘿',
         age: 16,
         gender: '女',
         info: {

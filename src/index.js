@@ -68,8 +68,10 @@ document.querySelector('#minus').addEventListener('click', () => {
     vm.data.family.splice(vm.data.family.length - 1, 1)
 });
 document.querySelector('#job').addEventListener('click', () => {
-    // vm.data.info.job = vm.data.info.job === '教师' ? '测量员' : '教师';
-  set(vm.data, 'test', '哈哈')
+  vm.data.info.job = vm.data.info.job === '教师' ? '测量员' : '教师';
+  if (!vm.data.test) {
+    set(vm.data, 'test', '哈哈');
+  } else {
+    vm.data.test = Math.random().toFixed(2);
+  }
 });
-
-

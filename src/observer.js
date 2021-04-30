@@ -42,7 +42,7 @@ export default class Observer {
 export function definedReactive(target, key, value) {
   let childObserver = undefined;
   if (value instanceof Array) childObserver = observer(value);
-  let dep = new Dep();
+  let dep = target._ob_.dep;
   if (typeof value === 'object' && !value._ob_) {
     new Observer(value);
   }
